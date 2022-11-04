@@ -6,6 +6,9 @@ function sumInput() {
   numbers.push(Number(a));
   numbers.push(Number(b));
   numbers.push(Number(c));
-  document.getElementById("sort").innerHTML = numbers.sort();
+  numbers.sort(function (a, b) {
+    return a - b;
+  });
+  document.getElementById("sort").innerHTML = numbers;
   document.getElementById("sum").innerHTML = Number(a) + Number(b) + Number(c);
 }
