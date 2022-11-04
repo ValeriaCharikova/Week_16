@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Стоимость авто</title>
     <link rel="stylesheet" href="./normalize.css" />
     <style>
       body {
@@ -41,51 +41,61 @@
     <div class="container">
       <div>
         <label for="brand">Марка автомобиля:</label>
-        <select>
-          <option value="1">LADA (ВАЗ)</option>
-          <option value="2">BMW</option>
-          <option value="3">Chevrolet</option>
-          <option value="4">Ford</option>
-          <option value="5">Нyindai</option>
-          <option value="6">Mazda</option>
-          <option value="7">Mercedes-Benz</option>
-          <option value="8">Nissan</option>
+        <select id="brand" onchange="calc()">
+          <option value="0">Выберите марку</option>
+          <option value="100000">LADA (ВАЗ)</option>
+          <option value="1000000">BMW</option>
+          <option value="800000">Chevrolet</option>
+          <option value="500000">Ford</option>
+          <option value="1100000">Mercedes-Benz</option>
         </select>
       </div>
       <div>
         <label for="year">Год выпуска:</label>
-        <select>
-          <option value="1">2022</option>
-          <option value="2">2021</option>
-          <option value="3">2020</option>
-          <option value="4">2019</option>
-          <option value="5">2018</option>
-          <option value="6">2017</option>
-          <option value="7">2016</option>
-          <option value="8">2015</option>
-          <option value="9">2014</option>
-          <option value="10">2013</option>
-          <option value="11">2012</option>
+        <select id="year" onchange="calc()">
+          <option value="0">Выберите год</option>
+          <option value="90000">2022</option>
+          <option value="80000">2021</option>
+          <option value="70000">2020</option>
+          <option value="60000">2019</option>
+          <option value="50000">2018</option>
         </select>
       </div>
       <div>
         <label for="bodytype">Тип кузова:</label> <br />
-        <input type="radio" name="type" /> Седан <br />
-        <input type="radio" name="type" /> Универсал
+        <input
+          type="radio"
+          name="type"
+          value="50000"
+          id="bodytype"
+          onchange="calc()"
+        />
+        Седан
+        <br />
+        <input
+          type="radio"
+          name="type"
+          value="80000"
+          id="bodytype2"
+          onchange="calc()"
+        />
+        Универсал
       </div>
       <div>
         <label for="engine">Тип топлива:</label>
-        Бензин <input type="checkbox" /> Дизель <input type="checkbox" />
+        Бензин
+        <input type="checkbox" value="10000" id="engine" onchange="calc()" />
+        Дизель
+        <input type="checkbox" value="20000" id="engine2" onchange="calc()" />
       </div>
       <div>
         <label for="mileage">Пробег (км):</label>
-        <input type="number" />
+        <input type="text" id="mileage" value="100" onchange="calc()" />
       </div>
-      <input type="button" class="button" value="Pассчитать" />
-    </div>
-    <div class="sum">
-      <label for="sum">Итоговая стоимость:</label>
-      <input type="text" />
+      <div class="sum">
+        <label for="result">Итоговая стоимость:</label>
+        <input type="text" id="result" onchange="calc()" />
+      </div>
     </div>
     <script src="./task2.js"></script>
   </body>
