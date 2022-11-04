@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./normalize.css" />
+    <style>
+      body {
+        display: grid;
+        justify-items: center;
+        background-color: rgb(218, 218, 218);
+        font-size: medium;
+      }
+      div {
+        margin: 15px;
+      }
+      label {
+        font-weight: bold;
+        font-size: large;
+      }
+      .container {
+        display: grid;
+        justify-items: flex-start;
+        width: 50%;
+        background-color: rgb(197, 207, 223);
+        border-radius: 20px;
+      }
+      .button {
+        justify-self: center;
+        margin-bottom: 10px;
+      }
+      .sum {
+        justify-self: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pассчитайте стоимость своего автомобиля</h1>
+    <div class="container">
+      <div>
+        <label for="brand">Марка автомобиля:</label>
+        <select>
+          <option value="1">LADA (ВАЗ)</option>
+          <option value="2">BMW</option>
+          <option value="3">Chevrolet</option>
+          <option value="4">Ford</option>
+          <option value="5">Нyindai</option>
+          <option value="6">Mazda</option>
+          <option value="7">Mercedes-Benz</option>
+          <option value="8">Nissan</option>
+        </select>
+      </div>
+      <div>
+        <label for="year">Год выпуска:</label>
+        <select>
+          <option value="1">2022</option>
+          <option value="2">2021</option>
+          <option value="3">2020</option>
+          <option value="4">2019</option>
+          <option value="5">2018</option>
+          <option value="6">2017</option>
+          <option value="7">2016</option>
+          <option value="8">2015</option>
+          <option value="9">2014</option>
+          <option value="10">2013</option>
+          <option value="11">2012</option>
+        </select>
+      </div>
+      <div>
+        <label for="bodytype">Тип кузова:</label> <br />
+        <input type="radio" name="type" /> Седан <br />
+        <input type="radio" name="type" /> Универсал
+      </div>
+      <div>
+        <label for="engine">Тип топлива:</label>
+        Бензин <input type="checkbox" /> Дизель <input type="checkbox" />
+      </div>
+      <div>
+        <label for="mileage">Пробег (км):</label>
+        <input type="number" />
+      </div>
+      <input type="button" class="button" value="Pассчитать" />
+    </div>
+    <div class="sum">
+      <label for="sum">Итоговая стоимость:</label>
+      <input type="text" />
+    </div>
+    <script src="./task2.js"></script>
+  </body>
+</html>
